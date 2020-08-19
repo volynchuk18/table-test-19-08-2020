@@ -4,7 +4,7 @@
       <div @click="closeHandler" class="modal--icon-close">
         &times;
       </div>
-      <ul>
+      <ul class="modal-list">
         <li :key="key" v-for="(value, key) in data">
           {{ `${key}: ${value}`}}
         </li>
@@ -47,6 +47,10 @@ export default {
     width: 300px;
     height: 300px;
     background: white;
+    &-list {
+      margin: 0 10px 10px 10px;
+      padding-inline-start: 1em;
+    }
     &--icon-close {
       margin-left: auto;
       font-size: 30px;
